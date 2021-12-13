@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: abaks
+  labels:
+    app: web
+spec:
+  containers:
+    - name: spring-boot-docker.jar
+      image: 6307304325/spring-boot-docker.jar:latest
+      ports:
+        - containerPort: 80
+   
