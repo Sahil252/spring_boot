@@ -10,19 +10,5 @@ spec:
       image: 6307304325/spring-boot-docker.jar:latest
       ports:
         - containerPort: 80
-        
- ---
- apiVersion: apps/v1
-kind: Service
-metadata:
-  name: abaks
-  namespace: abaks
-  annotations:
-    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
- spec:
-  type: Loadbalancer
-  ports:
-  - port: 80
-  selector:
-    app: web
+
    
